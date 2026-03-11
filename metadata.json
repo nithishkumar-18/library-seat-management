@@ -1,0 +1,5 @@
+{
+  "name": "Learning Center: Library Management",
+  "description": "A comprehensive library seat availability and booking system with separate portals for students and administrators, featuring a 3-floor layout with tables and private cabins.",
+  "requestFramePermissions": []
+}

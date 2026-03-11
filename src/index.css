@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-learning-center-purple: #6366f1;
+  --color-learning-center-dark: #1e1b4b;
+  --color-learning-center-pink: #ec4899;
+  --color-learning-center-blue: #3b82f6;
+  --color-learning-center-bg: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply bg-learning-center-bg text-zinc-900 antialiased font-sans;
+  }
+}
+
+@layer components {
+  .learning-center-card {
+    @apply bg-white rounded-[2.5rem] border border-zinc-100 shadow-sm transition-all duration-300;
+  }
+  
+  .learning-center-card-active {
+    @apply ring-2 ring-learning-center-purple border-transparent shadow-xl shadow-learning-center-purple/10;
+  }
+  
+  .learning-center-btn-primary {
+    @apply bg-learning-center-purple text-white px-8 py-4 rounded-2xl font-bold text-sm uppercase tracking-widest hover:bg-learning-center-dark transition-all shadow-lg shadow-learning-center-purple/20 active:scale-95;
+  }
+  
+  .learning-center-glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+}
